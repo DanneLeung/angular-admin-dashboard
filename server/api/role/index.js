@@ -1,9 +1,8 @@
 'use strict';
+import {Router} from 'express';
+import * as controller from './role.controller';
 
-var express = require('express');
-var controller = require('./role.controller');
-
-var router = express.Router();
+var router = new Router();
 
 router.get('/', controller.index);
 router.get('/:id', controller.show);

@@ -8,4 +8,4 @@ var RoleSchema = new mongoose.Schema({
   active: Boolean
 });
 
-export default mongoose.model('Role', RoleSchema);
+export default mongoose.model('Role', RoleSchema, 'roles');

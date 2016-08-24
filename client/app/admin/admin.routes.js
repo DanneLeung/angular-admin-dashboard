@@ -5,15 +5,17 @@ export default function routes($stateProvider) {
 
   $stateProvider.state('admin', {
     url: '/admin',
-    template:  require('./admin.html'),
+    template: require('./admin.html'),
   }).state('admin.user', {
     url: '/user',
     template: require('./user/user.html'),
-    controller: 'UserController'
+    controller: 'UserController',
+    controllerAs: 'vm'
   }).state('admin.role', {
     url: '/role',
     template: require('./role/role.html'),
-    controller: 'RoleController'
+    controller: 'RoleController',
+    controllerAs: 'vm'
   })
-  ;
+    ;
 };

@@ -1,1 +1,11 @@
-<div>This is the role view.</div>
+<div class="container">
+    <ul class="list-group role-list">
+        <li class="list-group-item" ng-repeat="role in vm.roles">
+            <div class="role-info">
+                <strong>{{role.name}}</strong><br>
+                <span class="text-muted">{{role.email}}</span>
+            </div>
+            <a ng-click="vm.delete(role)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
+        </li>
+    </ul>
+</div>

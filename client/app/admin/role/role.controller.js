@@ -2,10 +2,11 @@
 //@flow
 
 export default class RoleController {
-  message: string;
+  roles: Object[];
   /*@ngInject*/
-  constructor() {
-    this.message = "role list view";
+  constructor(Role) {
+    this.roles = Role.query();
   }
+
 }
 
